@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vuokratoimistot.LaskujenhallintaFXMLController">
+   <children>
+      <Pane layoutY="1.0" prefHeight="661.0" prefWidth="551.0" AnchorPane.topAnchor="1.0">
+         <children>
+            <Text layoutX="201.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Laskujenhallinta" wrappingWidth="113.15234375">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <RadioButton fx:id="radSahkoposti" layoutX="362.0" layoutY="500.0" mnemonicParsing="false" text="Lasku sähköpostiin">
+               <font>
+                  <Font name="System Italic" size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="radioGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radPaperi" layoutX="362.0" layoutY="538.0" mnemonicParsing="false" text="Lasku paperisena" toggleGroup="$radioGroup">
+               <font>
+                  <Font name="System Italic" size="16.0" />
+               </font>
+            </RadioButton>
+            <Button layoutX="374.0" layoutY="597.0" mnemonicParsing="false" onAction="#btnLahetaLasku" prefHeight="31.0" prefWidth="133.0" text="Lähetä lasku">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtLaskuid" layoutX="19.0" layoutY="469.0" prefHeight="21.0" prefWidth="149.0" promptText="Syötä laskuid" />
+            <Text fill="#619a1b" layoutX="19.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Laskun ID" wrappingWidth="139.15234375">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Button layoutX="390.0" layoutY="211.0" mnemonicParsing="false" onAction="#btnHaeAsiakas" prefHeight="31.0" prefWidth="102.0" text="Hae asiakas" />
+            <TextField fx:id="txtAsiakasEtunimi" layoutX="15.0" layoutY="125.0" />
+            <Text layoutX="15.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Etunimi" wrappingWidth="108.85156232118607">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtLaskunlahetyspvm" layoutX="19.0" layoutY="519.0" promptText="Syötä pvm: dd.mm.yyyy" />
+            <Text fill="#619a1b" layoutX="19.0" layoutY="559.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Laskun eräpäivä" wrappingWidth="113.15233696997166">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Button layoutX="191.0" layoutY="597.0" mnemonicParsing="false" onAction="#btnLaskunEsikatselu" prefHeight="31.0" prefWidth="133.0" text="Laskun esikatselu">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <TextField fx:id="txtAsiakkaanosoite" editable="false" layoutX="16.0" layoutY="214.0" />
+            <Text layoutX="18.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="lähiosoite" wrappingWidth="121.15234375">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtAsiakkansposti" editable="false" layoutX="182.0" layoutY="213.0" />
+            <Text layoutX="182.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="133.15234375">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtLaskurerapvm" layoutX="19.0" layoutY="563.0" promptText="Syötä laskun eräpäivä" />
+            <TextField fx:id="txtPalvelunimi" editable="false" layoutX="16.0" layoutY="360.0" />
+            <Text fill="#619a1b" layoutX="19.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Laskun lähetys päivämäärä" wrappingWidth="196.15234375">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtPalvelunselite" editable="false" layoutX="16.0" layoutY="403.0" prefHeight="25.0" prefWidth="149.0" />
+            <TextField fx:id="txtHinta" editable="false" layoutX="184.0" layoutY="360.0" />
+            <TextField fx:id="txtMaara" layoutX="184.0" layoutY="316.0" promptText="Syötä palveluiden määrä" />
+            <Text layoutX="19.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Palvelun nimi" wrappingWidth="139.15232452750206">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#619a1b" layoutX="186.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Palveluiden määrä" wrappingWidth="139.15232452750206">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="18.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Palvelun selite" wrappingWidth="102.15234375">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="184.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Palvelun hinta" wrappingWidth="121.1523377597332">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtAsiakasid" layoutX="15.0" layoutY="81.0" promptText="Syötä asiakasID" />
+            <Label layoutX="15.0" layoutY="64.0" prefHeight="20.0" prefWidth="133.0" text="Asiakkaan ID" textFill="#619a1b">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Text layoutX="15.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sukunimi" wrappingWidth="108.85156232118607">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="182.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postitoimipaikka" wrappingWidth="108.85156232118607">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="182.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postinumero" wrappingWidth="108.85156232118607">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtAsiakasSukunimi" editable="false" layoutX="15.0" layoutY="167.0" />
+            <TextField fx:id="txtAsiakasPostitoimipaikka" editable="false" layoutX="182.0" layoutY="127.0" />
+            <TextField fx:id="txtAsiakasPostinumero" editable="false" layoutX="182.0" layoutY="171.0" />
+            <Text layoutX="93.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hae asiakastiedot ennen laskun tietojen syöttämistä!" wrappingWidth="347.85156232118607">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Button layoutX="390.0" layoutY="357.0" mnemonicParsing="false" onAction="#btnHaepalvelu" prefHeight="31.0" prefWidth="102.0" text="Hae palvelu" />
+            <Separator layoutX="19.0" layoutY="259.0" prefHeight="3.0" prefWidth="474.0" />
+            <Separator layoutX="19.0" layoutY="434.0" prefHeight="3.0" prefWidth="474.0" />
+            <Text layoutX="93.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hae palvelun tiedot ennen laskun tietojen syöttämistä!" wrappingWidth="347.85156232118607">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Button layoutX="19.0" layoutY="597.0" mnemonicParsing="false" onAction="#btnLaskunLisays" prefHeight="31.0" prefWidth="148.0" text="Lisää lasku">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Separator layoutX="347.0" layoutY="456.0" orientation="VERTICAL" prefHeight="176.0" prefWidth="0.0" />
+            <Text fill="#619a1b" layoutX="19.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Palvelun ID" wrappingWidth="139.15232452750206">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtPalveluID" layoutX="16.0" layoutY="316.0" promptText="Syötä palvelun id" />
+            <TextField fx:id="txtVarausID" layoutX="184.0" layoutY="469.0" />
+            <Text layoutX="184.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Varauksen ID" wrappingWidth="139.15234375">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children></Pane>
+      <WebView fx:id="webView" layoutX="528.0" layoutY="3.0" prefHeight="657.0" prefWidth="812.0" />
+   </children>
+</AnchorPane>

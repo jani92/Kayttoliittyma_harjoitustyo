@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="1008.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vuokratoimistot.RaportointiFXMLController">
+   <children>
+      <Text layoutX="260.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Raportointi">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtValitseToimitila" layoutX="14.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valitse toimitila">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <VBox layoutX="196.0" layoutY="113.0" prefHeight="213.0" prefWidth="208.0" spacing="10.0">
+         <children>
+            <CheckBox fx:id="lisapalvelu1Checkbox" mnemonicParsing="false" text="Lisäpalvelu 1" />
+            <CheckBox fx:id="lisapalvelu2Checkbox" mnemonicParsing="false" text="Lisäpalvelu 2" />
+            <CheckBox fx:id="lisapalvelu3Checkbox" mnemonicParsing="false" text="Lisäpalvelu 3" />
+            <CheckBox fx:id="lisapalvelu4Checkbox" mnemonicParsing="false" text="Lisäpalvelu 4" />
+            <CheckBox fx:id="lisapalvelu5Checkbox" mnemonicParsing="false" text="Lisäpalvelu 5" />
+            <CheckBox fx:id="lisapalvelu6Checkbox" mnemonicParsing="false" text="Lisäpalvelu 6" />
+            <CheckBox fx:id="lisapalvelu7Checkbox" mnemonicParsing="false" text="Lisäpalvelu 7" />
+            <CheckBox fx:id="lisapalvelu8Checkbox" mnemonicParsing="false" text="Lisäpalvelu 8" />
+         </children>
+      </VBox>
+      <Text fx:id="txtValitsepalvelu" layoutX="196.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valitse lisäpalvelu">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Button fx:id="tulostaRaportti" layoutX="374.0" layoutY="279.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="199.0" text="Tulosta raportti" />
+      <Text fx:id="txtValitsepalvelu1" layoutX="362.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valitse kuukausi">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="raportointiCB" layoutX="362.0" layoutY="113.0" prefHeight="40.0" prefWidth="208.0" />
+      <TextField fx:id="haeToimitilaaKentta" layoutX="23.0" layoutY="113.0" promptText="Syötä toimitilaID" />
+      <Text layoutX="18.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Syötä toimitilan ID ja paina enter" wrappingWidth="167.490234375" />
+      <TextArea fx:id="Tulokset" layoutX="631.0" layoutY="26.0" prefHeight="374.0" prefWidth="355.0" promptText="Valittu tila:" />
+   </children>
+</AnchorPane>
